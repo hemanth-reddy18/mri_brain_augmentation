@@ -1,0 +1,15 @@
+# MRI App Walkthrough
+
+## Deployment Status
+The MRI application has been successfully deployed locally.
+
+- **Server URL**: http://localhost:8000
+- **Status**: Running
+
+## Verification
+- Verified [run.sh](file:///Users/v.hemanthkumarreddy/.gemini/antigravity/run.sh) script execution.
+- Confirmed server startup logs indicating "Uvicorn running on http://0.0.0.0:8000".
+- Checked existence of MRI data in `mri/mri_data`.
+
+## Next Steps
+- Open the URL in a browser to interact with the application.

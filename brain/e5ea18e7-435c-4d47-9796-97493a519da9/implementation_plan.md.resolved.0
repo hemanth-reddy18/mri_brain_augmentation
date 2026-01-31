@@ -1,0 +1,41 @@
+# MRI Project Refactoring and Execution Plan
+
+## Goal
+Running the MRI data loader and visualization scripts, ensuring they are error-free, and saving the project as `mri`.
+
+## User Review Required
+> [!NOTE]
+> **Interpretation of "save the file as mri itself"**: I will move the entire project from `scratch/mri_project` to a new top-level directory named `mri`. This ensures the project is saved permanently.
+
+## Proposed Changes
+
+### Project Structure
+Move all files from `scratch/mri_project/` to `mri/`.
+
+#### [NEW] Directory `mri/`
+- `mri/mri_loader.py` (Moved)
+- `mri/visualize_mri.py` (Moved)
+- `mri/generate_mock_data.py` (Moved)
+
+### Dependencies
+Ensure the following packages are installed (will verify during execution):
+- `numpy`
+- `nibabel`
+- `torch`
+- `torchvision`
+- `matplotlib`
+
+## Verification Plan
+
+### Automated Execution
+I will run the scripts in the following order:
+1.  **Generate Data**: `python mri/generate_mock_data.py`
+    - *Success Criteria*: Creates `mri/mri_data` with `.nii` files.
+2.  **Load Data**: `python mri/mri_loader.py`
+    - *Success Criteria*: Prints batch shape and confirms data loading.
+3.  **Visualize**: `python mri/visualize_mri.py`
+    - *Success Criteria*: Generates `previews/mri_batch_preview.png`.
+
+### Manual Review
+- I will check the output logs for errors.
+- I will verify the existence of the generated preview image.

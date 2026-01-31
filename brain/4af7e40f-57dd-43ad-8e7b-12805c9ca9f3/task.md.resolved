@@ -1,0 +1,5 @@
+# Task List
+
+- [x] Explore workspace to identify entry point <!-- id: 0 -->
+- [/] Run the identified code <!-- id: 1 -->
+- [ ] troubleshoot if necessary <!-- id: 2 -->

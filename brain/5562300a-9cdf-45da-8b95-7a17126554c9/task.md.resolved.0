@@ -1,0 +1,6 @@
+# Deploying MRI App
+
+- [ ] Check [run.sh](file:///Users/v.hemanthkumarreddy/.gemini/antigravity/run.sh) and [requirements.txt](file:///Users/v.hemanthkumarreddy/.gemini/antigravity/requirements.txt) <!-- id: 0 -->
+- [ ] Review `mri/server.py` startup logic <!-- id: 1 -->
+- [ ] Install dependencies <!-- id: 2 -->
+- [ ] Run application and verify <!-- id: 3 -->

@@ -1,0 +1,31 @@
+# MRI Web Viewer Deployment Plan
+
+## Goal
+Transform the standalone Python scripts into a web application to "deploy" the MRI viewer. This will allow interactively viewing MRI slices in the browser.
+
+## User Review Required
+> [!NOTE]
+> I am assuming "deploy" implies creating a web interface ([index.html](file:///Users/v.hemanthkumarreddy/.gemini/antigravity/index.html) was open) and running a local web server. I will use **FastAPI** for the backend and **Vanilla JS** for the frontend.
+
+## Proposed Changes
+
+### Backend (`mri/server.py`)
+- **[NEW]** Create a FastAPI server.
+- **Endpoint `/api/data`**: Returns list of available subjects/files.
+- **Endpoint `/api/slice/{file_path}/{slice_idx}`**: Returns a specific image slice as PNG/JPEG.
+- Use existing [mri_loader.py](file:///Users/v.hemanthkumarreddy/.gemini/antigravity/scratch/mri_project/mri_loader.py) logic to load NIfTI files.
+
+### Frontend ([index.html](file:///Users/v.hemanthkumarreddy/.gemini/antigravity/index.html))
+- **[NEW]** Interactive UI to:
+    - Select MRI file.
+    - Slider to scroll through slices (depth).
+    - Canvas to display the MRI image.
+
+### Dependencies
+- `fastapi`
+- `uvicorn`
+- `python-multipart`
+
+## Verification Plan
+1.  **Start Server**: `uvicorn mri.server:app --reload`
+2.  **Browser Test**: Open `http://localhost:8000` via the browser tool to verify the UI loads and slices can be scrolled.

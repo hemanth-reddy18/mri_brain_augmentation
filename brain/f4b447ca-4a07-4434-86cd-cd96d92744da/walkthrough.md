@@ -1,0 +1,17 @@
+# Deployed MRI Application
+
+The MRI application has been successfully deployed locally.
+
+## Access
+You can access the application at:
+[http://localhost:8000](http://localhost:8000)
+
+## Validation
+- **Server Status**: Running on port 8000.
+- **Data Availability**: Confirmed `mri_data` contains BraTS2020 training data.
+- **API Check**: `GET /api/files` returns the list of available MRI scans.
+- **Frontend**: The server serves `index.html` at the root, which is identical to `mri.html`.
+
+## Commands Used
+1. **Install Dependencies**: `python3 -m pip install -r requirements.txt`
+2. **Run Server**: `python3 mri/server.py`
