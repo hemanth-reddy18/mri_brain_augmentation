@@ -13,3 +13,6 @@ This is a Python-based application for MRI data analysis and visualization.
    ```bash
    python mri/server.py
    ```
+
+3. Open the application:
+   Open `mripython.html` in your browser to start the analysis.
